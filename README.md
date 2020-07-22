@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# image-gallery
 
-## Available Scripts
+This web-application is an image gallery with image upload function
 
-In the project directory, you can run:
+# Commands used to install Font awesome:
 
-### `npm start`
+$ npm i --save @fortawesome/fontawesome-svg-core
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Commands used to publish react files in github:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+git remote set-url origin https://github.com/BagautdinovaYulia/image-gallery
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Requirement
 
-### `npm run build`
+# Требования к галерее:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
++ Размещение картинки галереи рядами.
++ Количество рядов не ограничено.
+- Ряды должны быть одинаковы по ширине, но могут различаться по высоте
+    (Не смогла добиться выравнивания по ширине).
++ Все картинки в одном ряду должны быть одинаковы по высоте.
++ У картинок должны быть сохранены пропорции.
++ Интерфейс должен быть responsive, максимальная ширина контейнера — 860 px, минимальная – 320 px.
++ Количество картинок в каждом ряду не фиксировано. При сужении/расширении галереи их количество может меняться. 
++- Важно, чтобы на картинки было приятно смотреть: на мобильных они не должны быть слишком мелкими, на десктопах не должны быть слишком крупными.
+    (просто задала фиксированную высоту картинок 300px)
+- Следует добавить плейсхолдеры на время загрузки. Внешний вид выберите на усмотрение кандидата.
+    (не знаю как добавить плейсхолдеры в массив изображений)
++- Предусмотрите  возможность добавить картинку drag-n-drop в уже готовую загруженную галерею.
+    (добавить dragndrop добавила, а с функционалом сложности. Я думаю это делается через consolelog)
+- Добавьте возможность удалить картинку из галереи.
+    (добавила функцию deleteImage.. возможно, для удаления, необходимо картинки помещать в input и от туда удалять)
++ Мы против использования сторонних библиотек построения галереи, которые выполняют поставленную задачу за вас.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Требования к верстке:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
++- Поддержка браузеров: две последние мажорные версии (FF, Chrome, IE).
+    (сброс стилей через css)
++ Необходимо использовать соглашение по именованию BEM.
+    (немного видно в DragnDrop.js)
++ Использование CSS-препроцессоров.
+    (sass)
 
-### `npm run eject`
+# Требования к исходникам:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
++ Исходники должны компилироваться на любой машине. Желательно приложить readme по сборке.
+    (чудо-реакт)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Дополнительно:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Добавила увеление изображений при наведении на них.
+В требованиях не написано, добавила поле закрузки изображения по URL (работает).
